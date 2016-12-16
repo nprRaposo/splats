@@ -3,3 +3,10 @@
 ################################################################################
 
 /Splats/packages
+/Splats/.vs
+/Splats/Splats.Web/bin
+/Splats/Splats.Data/bin/Debug
+/Splats/Splats.Data/obj/Debug
+/Splats/Splats.Services/bin/Debug
+/Splats/Splats.Services/obj/Debug
+/Splats/Splats.Web/App_Data
