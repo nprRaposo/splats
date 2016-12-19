@@ -25,11 +25,8 @@ namespace Splats.Data.DAL
 		}
 
 		public DbSet<Serie> Series { get; set; }
-		public List<Serie> GetSeries()
-		{
-			return Series.ToList();
-		}
 
+		public DbSet<Director> Directors { get; set; }
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{

@@ -84,3 +84,5 @@ C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Splats.Data.dll
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Splats.Services.dll
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Splats.Data.pdb
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Splats.Services.pdb
+C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\obj\Debug\Splats.Web.Migrations.Director.resources
+C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\obj\Debug\Splats.Web.csproj.GenerateResource.Cache

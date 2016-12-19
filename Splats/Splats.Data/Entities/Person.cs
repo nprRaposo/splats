@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Splats.Data.Entities
 {
-	public class Serie
+	public class Person
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
-		public int Seasons { get; set; }
-		public string Description { get; set; }
-		public int DirectorId { get; set; }
-		public virtual Director Director { get; set; }
+		public string Surname { get; set; }
+
+
 	}
 }
