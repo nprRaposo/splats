@@ -13,7 +13,7 @@ namespace Splats.Data.DAL
 	{
 		private static SplatsContext _instance { get; set; }
 
-		public SplatsContext() : base("SplatsContext")
+		public SplatsContext() : base("Splats")
         {
 		}
 
