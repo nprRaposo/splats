@@ -86,3 +86,10 @@ C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Splats.Data.pdb
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Splats.Services.pdb
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\obj\Debug\Splats.Web.Migrations.Director.resources
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\obj\Debug\Splats.Web.csproj.GenerateResource.Cache
+C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Ninject.dll
+C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Ninject.Web.Common.dll
+C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Ninject.Web.Mvc.dll
+C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\WebActivatorEx.dll
+C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Ninject.xml
+C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Ninject.Web.Common.xml
+C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Ninject.Web.Mvc.xml

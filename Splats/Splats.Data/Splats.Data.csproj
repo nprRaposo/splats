@@ -49,9 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DAL\Repository.cs" />
+    <Compile Include="DAL\IRepository.cs" />
     <Compile Include="DAL\SplatsContext.cs" />
-    <Compile Include="DAL\SplatsDataAccess.cs" />
     <Compile Include="DAL\SplatsInitializer.cs" />
     <Compile Include="Entities\Character.cs" />
     <Compile Include="Entities\Director.cs" />

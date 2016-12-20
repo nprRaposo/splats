@@ -9,14 +9,24 @@ using System.Web.Mvc;
 using Splats.Data.DAL;
 using Splats.Data.Entities;
 using Splats.Services;
+using Splats.Services.Generic;
 
 namespace Splats.Web.Controllers
 {
     public class SeriesController : Controller
     {
-        public ActionResult Index()
+		#region Properties
+		private readonly IService<Serie> _seriesService; 
+		#endregion
+
+		public SeriesController(IService<Serie> seriesService)
+		{
+			this._seriesService = seriesService;
+		}
+
+		public ActionResult Index()
         {
-			return View(SeriesService.Get());
+			return View(this._seriesService.Get());
         }
 
         public ActionResult Details(int? id)
@@ -25,7 +35,7 @@ namespace Splats.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var serie = SeriesService.GetBy(id.Value);
+            var serie = this._seriesService.GetBy(id.Value);
             if (serie == null)
             {
                 return HttpNotFound();
@@ -42,7 +52,9 @@ namespace Splats.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,Seasons,Description")] Serie serie)
         {
-			SeriesService.Insert(serie);
+			//SeriesService.Insert(serie);
+			serie.DirectorId = 1;
+			this._seriesService.Insert(serie);
 			return RedirectToAction("Index");
         }
 
@@ -52,7 +64,7 @@ namespace Splats.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var serie = SeriesService.GetBy(id.Value);
+            var serie = this._seriesService.GetBy(id.Value);
 
             if (serie == null)
             {
@@ -67,7 +79,7 @@ namespace Splats.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-				SeriesService.Update(serie);
+				this._seriesService.Update(serie);
                 return RedirectToAction("Index");
             }
             return View(serie);
@@ -80,7 +92,7 @@ namespace Splats.Web.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-			var serie = SeriesService.GetBy(id.Value);
+			var serie = this._seriesService.GetBy(id.Value);
             if (serie == null)
             {
                 return HttpNotFound();
@@ -92,7 +104,7 @@ namespace Splats.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-			SeriesService.Delete(id);
+			this._seriesService.Delete(id);
             return RedirectToAction("Index");
         }
 
