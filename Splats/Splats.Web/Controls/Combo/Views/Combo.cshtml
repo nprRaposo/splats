@@ -1,0 +1,11 @@
+﻿@using Splats.Web.Controls.Combo
+@using Splats.Web.Controls.Combo.Models
+
+@model SplatsComboModel
+
+
+@Html.DropDownList(Model.ID, Model.DataSource, Model.HtmlAttributes)
+
+<script type="text/javascript">
+    $('#@Model.ID').select2();
+</script>

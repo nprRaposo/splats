@@ -16,12 +16,14 @@ namespace Splats.Web.Controllers
     public class SeriesController : Controller
     {
 		#region Properties
-		private readonly IService<Serie> _seriesService; 
+		private readonly IService<Serie> _seriesService;
+		private readonly IService<Director> _directorsService;
 		#endregion
 
-		public SeriesController(IService<Serie> seriesService)
+		public SeriesController(IService<Serie> seriesService, IService<Director> directorsService)
 		{
 			this._seriesService = seriesService;
+			this._directorsService = directorsService;
 		}
 
 		public ActionResult Index()
@@ -45,15 +47,14 @@ namespace Splats.Web.Controllers
 
         public ActionResult Create()
         {
-            return View();
+			ViewBag.Directors = new SelectList(this._directorsService.Get(), "Id", "Name");
+			return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Seasons,Description")] Serie serie)
+        public ActionResult Create([Bind(Include = "Id,Name,Seasons,Description, DirectorId")] Serie serie)
         {
-			//SeriesService.Insert(serie);
-			serie.DirectorId = 1;
 			this._seriesService.Insert(serie);
 			return RedirectToAction("Index");
         }

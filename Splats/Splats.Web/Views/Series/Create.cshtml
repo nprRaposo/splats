@@ -1,4 +1,5 @@
 ﻿@model Splats.Data.Entities.Serie
+@using Splats.Web.Controls.Combo
 
 @{
     ViewBag.Title = "Create";
@@ -22,6 +23,13 @@
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
         </div>
+
+		<div class="form-group">
+			@Html.LabelFor(model => model.DirectorId, "Director", htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@Html.DropDownList("DirectorId", (SelectList)ViewBag.Directors, "Select a director", new { @class = "col-md-10 form-control select"} )
+			</div>
+		</div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Seasons, htmlAttributes: new { @class = "control-label col-md-2" })
