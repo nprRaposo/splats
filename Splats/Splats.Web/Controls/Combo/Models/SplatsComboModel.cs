@@ -11,7 +11,7 @@ namespace Splats.Web.Controls.Combo.Models
 		public string ID { get; set; }
 		public SelectList DataSource { get; set; }
 		public bool SearchBox { get; set; }
-		public IDictionary<string, object> HtmlAttributes { get; set; }
+		public object HtmlAttributes { get; set; }
 
 		public SplatsComboModel()
 		{

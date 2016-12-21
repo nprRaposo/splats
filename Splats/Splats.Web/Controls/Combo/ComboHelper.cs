@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using System.Web.Routing;
 
-namespace Splats.Web.Controls.Combo
+namespace Splats.Web.Controls
 {
 	public static partial class HtmlHelperExtensions
 	{
@@ -22,14 +22,13 @@ namespace Splats.Web.Controls.Combo
 			return SplatsCombo(htmlHelper, name, selectList,  htmlAttributes);
 		}
 
-
 		public static MvcHtmlString SplatsCombo(this HtmlHelper htmlHelper, string name, SelectList selectList, object htmlAttributes)
 		{
 			var model = new SplatsComboModel
 			{
 				ID = name,
 				DataSource = selectList,
-				//HtmlAttributes = ControlHelper.GetHtmlAttributes(htmlAttributes),
+				HtmlAttributes = htmlAttributes,
 				SearchBox = true
 			};
 
@@ -43,7 +42,7 @@ namespace Splats.Web.Controls.Combo
 
 			model.HtmlAttributes = model.HtmlAttributes;
 
-			return htmlHelper.Partial("~/Controls/Combo/Views/Combo.cshtml", model);
+			return htmlHelper.Partial("~/Views/Controls/Combo.cshtml", model);
 		}
 	}
 }
