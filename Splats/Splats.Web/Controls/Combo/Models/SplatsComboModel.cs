@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Splats.Web.Controls.Combo.Models
+namespace Splats.Web.Controls
 {
 	public class SplatsComboModel
 	{

@@ -13,6 +13,9 @@ namespace Splats.Data.Entities
 		public int Seasons { get; set; }
 		public string Description { get; set; }
 		public int DirectorId { get; set; }
+
+		public string ImageUrl { get; set; }
+
 		public virtual Director Director { get; set; }
 	}
 }

@@ -213,9 +213,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DirectorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SeriesController.cs" />
+    <Compile Include="Controls\SerieItemList\SerieListItemHelper.cs" />
+    <Compile Include="Controls\SerieItemList\Models\SerieListItemModel.cs" />
     <Compile Include="Controls\Combo\ComboHelper.cs" />
     <Compile Include="Controls\Combo\Models\SplatsComboModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -224,6 +227,10 @@
     <Compile Include="Migrations\201612191439448_Director.cs" />
     <Compile Include="Migrations\201612191439448_Director.Designer.cs">
       <DependentUpon>201612191439448_Director.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612221523098_SerieImage.cs" />
+    <Compile Include="Migrations\201612221523098_SerieImage.Designer.cs">
+      <DependentUpon>201612221523098_SerieImage.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -299,6 +306,10 @@
     <Content Include="Views\Series\Edit.cshtml" />
     <Content Include="Views\Series\Index.cshtml" />
     <Content Include="Views\Controls\Combo.cshtml" />
+    <Content Include="Views\Director\Create.cshtml" />
+    <Content Include="Views\Director\Edit.cshtml" />
+    <Content Include="Views\Director\Index.cshtml" />
+    <Content Include="Views\Controls\SerieListItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -325,6 +336,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612191439448_Director.resx">
       <DependentUpon>201612191439448_Director.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612221523098_SerieImage.resx">
+      <DependentUpon>201612221523098_SerieImage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

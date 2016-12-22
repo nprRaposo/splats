@@ -47,13 +47,13 @@ namespace Splats.Web.Controllers
 
         public ActionResult Create()
         {
-			ViewBag.Directors = new SelectList(this._directorsService.Get(), "Id", "Name");
+			ViewBag.Directors = new SelectList(this._directorsService.Get(), "Id", "FullName");
 			return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Seasons,Description, DirectorId")] Serie serie)
+        public ActionResult Create([Bind(Include = "Id,Name,Seasons,Description, DirectorId, ImageUrl")] Serie serie)
         {
 			this._seriesService.Insert(serie);
 			return RedirectToAction("Index");
