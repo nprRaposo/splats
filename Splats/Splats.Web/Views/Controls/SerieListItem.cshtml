@@ -2,12 +2,12 @@
 
 @model SerieListItemModel
 
-<div class="col-md-12">
+<div class="col-md-12" >
 	<div class="thumbnail">
 		<img src='@Model.ImageUrl' alt="@Model.Title" style="width:100%">
 		<h4>@Model.Title</h4>
 		<div class="caption">
-			<p>@Model.Description</p>
+			<p style="display: block;overflow-y: hidden;max-height: 200px;">@Model.Description</p>
 		</div>
 	</div>
 </div>
