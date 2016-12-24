@@ -12,7 +12,8 @@ namespace Splats.Web
 						"~/Scripts/jquery-{version}.js"));
 
 			bundles.Add(new ScriptBundle("~/bundles/libs").Include(
-						"~/Content/libs/select2/js/select2.js"));
+						"~/Content/libs/select2/js/select2.js",
+						"~/Scripts/shared/*.js"));
 
 			bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
 						"~/Scripts/jquery.validate*"));

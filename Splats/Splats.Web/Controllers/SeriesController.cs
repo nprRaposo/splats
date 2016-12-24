@@ -71,12 +71,14 @@ namespace Splats.Web.Controllers
             {
                 return HttpNotFound();
             }
-            return View(serie);
+
+			ViewBag.Directors = new SelectList(this._directorsService.Get(), "Id", "FullName", serie.DirectorId);
+			return PartialView(serie);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Seasons,Description")] Serie serie)
+        public ActionResult Edit([Bind(Include = "Id,Name,Seasons,Description, DirectorId, ImageUrl")] Serie serie)
         {
             if (ModelState.IsValid)
             {
