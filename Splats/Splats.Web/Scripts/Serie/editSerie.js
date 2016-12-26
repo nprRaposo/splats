@@ -3,6 +3,10 @@
 		return $('#editSerieFrm');
 	},
 
+	father : function (){
+		return homeSerieView;
+	},
+
 	m: function (){
 		return $('#mdlEditSerie');
 	},
@@ -19,8 +23,20 @@
 
 	editSerie : function () {
 		var me = editSerieView;
-		debugger;
-		postForm(me.f(), function () { alert('Updated') });
+		postForm(me.f(), function (data) {
+			me.onSerieUpdated(data);
+		});
+	},
+
+	onSerieUpdated: function (data) {
+		if (data.Result == false) {
+			$.notificationError('Error on updating Serie');
+			return;
+		}
+		$.notificationSuccess('The serie with ID ' + data.SerieId + ' has been updated correctly');
+		$('#modal-container').modal('hide');
+		var me = editSerieView;
+		me.father().reloadSerie(data.SerieId);
 	}
 }
 

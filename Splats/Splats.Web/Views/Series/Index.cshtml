@@ -1,23 +1,31 @@
 ﻿@model IEnumerable<Splats.Data.Entities.Serie>
 
+<script type="text/javascript">
+	var urlReload = '@Url.Action("ReloadSerie","Series")';
+	var urlEdit = '@Html.ActionLink("Edit", "Edit", new { id = 1 }, new { @class = "modal-link btn btn-success" })';
+</script>
+
+<script src="~/Scripts/Serie/homeSerie.js"></script>
+
 @{
-	ViewBag.Title = "Index";
-}
+					ViewBag.Title = "Index";
+				}
 <p>
 	@Html.ActionLink("Create New", "Create")
 </p>
 
-<div class="row">
-	@foreach (var item in Model)
-	{
-		<div class="col-md-3" style="padding-top:1rem;">
-			@Html.SerieListItem(item.Name, item.Description, item.ImageUrl)
-			@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "modal-link btn btn-success" })
-		</div>
+<div id="divHomeSerie">
+	<div class="row">
+		@foreach (var item in Model)
+			{
+			<div class="col-md-3" style="padding-top:1rem;">
+				@Html.SerieListItem(item.Name, item.Description, item.ImageUrl, item.Id)
+			</div>
 
-	}
+		}
+	</div>
 </div>
 
 @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-@Html.ActionLink("Details", "Details", new { id = item.Id }) |
-@Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+	@Html.ActionLink("Details", "Details", new { id = item.Id }) |
+	@Html.ActionLink("Delete", "Delete", new { id = item.Id })*@

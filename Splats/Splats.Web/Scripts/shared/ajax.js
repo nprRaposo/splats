@@ -5,6 +5,6 @@
 		dataType: 'json',
 		data: form.serialize(),
 		success: successCallBack,
-		fail: failureCallBack
+		error: failureCallBack
 	});
 }

@@ -2,8 +2,19 @@
 
 @model SerieListItemModel
 
-<div class="col-md-12" >
+<div class="col-md-12" id='@Model.DivContainerId'>
 	<div class="thumbnail">
+		<div>
+			<span class="label label-info info" style="position:absolute;">
+				<a href='@Url.Action("Edit", "Series", new { id = Model.Id })' class="modal-link" style="text-decoration: none">
+					<span data-toggle="tooltip" title="Edit"><b class="glyphicon glyphicon-pencil"></b></span> |
+				</a>
+				
+				<span data-toggle="tooltip" title="Delete"><b class="glyphicon glyphicon-remove"></b></span> |
+				<span data-toggle="tooltip" title="Detail"><b class="glyphicon glyphicon-zoom-in"></b></span>
+			</span>
+		</div>
+		
 		<img src='@Model.ImageUrl' alt="@Model.Title" style="width:100%">
 		<h4>@Model.Title</h4>
 		<div class="caption">

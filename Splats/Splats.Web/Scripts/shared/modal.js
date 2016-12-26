@@ -23,4 +23,10 @@
 	$('#CancelModal').on('click', function () {
 		return false;
 	});
+
+	function closeModal() {
+		$('#modal-container').modal('hide');
+	}
+
+
 });

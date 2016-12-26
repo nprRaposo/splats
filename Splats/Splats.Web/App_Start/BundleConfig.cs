@@ -13,6 +13,8 @@ namespace Splats.Web
 
 			bundles.Add(new ScriptBundle("~/bundles/libs").Include(
 						"~/Content/libs/select2/js/select2.js",
+						"~/Content/libs/spin/spin.js",
+						"~/Scripts/toastr.js",
 						"~/Scripts/shared/*.js"));
 
 			bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -30,6 +32,7 @@ namespace Splats.Web
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/bootstrap.css",
 					  "~/Content/site.css",
+					  "~/Content/toastr.css",
 					  "~/Content/libs/select2/css/select2.css"));
 		}
 	}

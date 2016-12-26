@@ -7,19 +7,20 @@ namespace Splats.Web.Controls
 	public static partial class HtmlHelperExtensions
 	{
 
-		public static MvcHtmlString SerieListItem(this HtmlHelper htmlHelper, string title, string description, string imageUrl)
+		public static MvcHtmlString SerieListItem(this HtmlHelper htmlHelper, string title, string description, string imageUrl, int id)
 		{
-			return SerieListItem(htmlHelper, title, description, imageUrl, null);
+			return SerieListItem(htmlHelper, title, description, imageUrl, id, null);
 		}
 
-		public static MvcHtmlString SerieListItem(this HtmlHelper htmlHelper, string title, string description, string imageUrl, object htmlAttributes)
+		public static MvcHtmlString SerieListItem(this HtmlHelper htmlHelper, string title, string description, string imageUrl, int id, object htmlAttributes)
 		{
 			var model = new SerieListItemModel
 			{
 				Title = title,
 				Description = description,
 				ImageUrl = imageUrl,
-				HtmlAttributes = htmlAttributes
+				HtmlAttributes = htmlAttributes,
+				Id = id
 			};
 
 			return SerieListItem(htmlHelper, model);
