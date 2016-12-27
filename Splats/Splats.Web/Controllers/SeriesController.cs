@@ -43,7 +43,7 @@ namespace Splats.Web.Controllers
 			{
 				return HttpNotFound();
 			}
-			return View(serie);
+			return PartialView(serie);
 		}
 
 		public ActionResult Create()
@@ -85,27 +85,11 @@ namespace Splats.Web.Controllers
 			return Json(new { Result = true, SerieId = serie.Id }, JsonRequestBehavior.AllowGet);
 		}
 
-		public ActionResult Delete(int? id)
-		{
-			if (id == null)
-			{
-				return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-			}
-
-			var serie = this._seriesService.GetBy(id.Value);
-			if (serie == null)
-			{
-				return HttpNotFound();
-			}
-			return View(serie);
-		}
-
 		[HttpPost, ActionName("Delete")]
-		[ValidateAntiForgeryToken]
 		public ActionResult DeleteConfirmed(int id)
 		{
 			this._seriesService.Delete(id);
-			return RedirectToAction("Index");
+			return Json(new { Result = true, SerieId = id}, JsonRequestBehavior.AllowGet);
 		}
 
 		public ActionResult ReloadSerie(int serieId)

@@ -1,42 +1,36 @@
 ﻿@model Splats.Data.Entities.Serie
 
-@{
-    ViewBag.Title = "Details";
-}
+<div class="modal-content modal-sm" id="mdlDetailSerie">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<h4 class="modal-title">Details of @Model.Name</h4>
+	</div>
+	<div class="modal-body">
+		<dl class="dl-horizontal">
+			<dt>
+				@Html.DisplayNameFor(model => model.Name)
+			</dt>
 
-<h2>Details</h2>
+			<dd>
+				@Html.DisplayFor(model => model.Name)
+			</dd>
 
-<div>
-    <h4>Serie</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+			<dt>
+				@Html.DisplayNameFor(model => model.Seasons)
+			</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+			<dd>
+				@Html.DisplayFor(model => model.Seasons)
+			</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Seasons)
-        </dt>
+			<dt>
+				@Html.DisplayNameFor(model => model.Description)
+			</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Seasons)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-    </dl>
+			<dd>
+				@Html.DisplayFor(model => model.Description)
+			</dd>
+		</dl>
+	</div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+

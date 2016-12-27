@@ -243,11 +243,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\libs\bootbox\bootbox.min.js" />
     <Content Include="Content\libs\select2\css\select2.css" />
     <Content Include="Content\libs\select2\js\select2.js" />
     <Content Include="Content\libs\spin\spin.js" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="Controls\SerieItemList\Js\serieItemList.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

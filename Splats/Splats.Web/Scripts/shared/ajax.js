@@ -8,3 +8,13 @@
 		error: failureCallBack
 	});
 }
+
+function postTo(url, successCallBack, failureCallBack) {
+	$.ajax({
+		url: url,
+		type: 'post',
+		dataType: 'json',
+		success: successCallBack,
+		error: failureCallBack
+	});
+}
