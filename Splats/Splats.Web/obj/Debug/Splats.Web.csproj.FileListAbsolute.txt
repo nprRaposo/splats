@@ -90,7 +90,7 @@ C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Microsoft.Owin.Securi
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\obj\Debug\Splats.Web.csprojResolveAssemblyReference.cache
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\obj\Debug\Splats.Web.Migrations.Director.resources
+C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\obj\Debug\Splats.Web.Migrations.SerieImage.resources
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\obj\Debug\Splats.Web.csproj.GenerateResource.Cache
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\obj\Debug\Splats.Web.dll
 C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\obj\Debug\Splats.Web.pdb
-C:\Users\Nicolas\Source\Repos\splats\Splats\Splats.Web\obj\Debug\Splats.Web.Migrations.SerieImage.resources

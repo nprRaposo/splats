@@ -31,3 +31,18 @@ select,
 textarea {
 	max-width: 280px;
 }
+
+.btnBottom {
+    position: fixed;
+    bottom: 10%;
+    right: 3%; 
+}
+
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  line-height: 40px; /* adjust line height to align vertically*/
+  padding:0;
+  border-radius: 50%;
+}
+

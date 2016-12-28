@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Splats.Web.Controllers
+namespace Splats.Web.Areas.Directors.Controllers
 {
     public class DirectorController : Controller
     {

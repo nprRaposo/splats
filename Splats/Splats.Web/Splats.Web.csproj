@@ -212,11 +212,13 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Directors\DirectorsAreaRegistration.cs" />
+    <Compile Include="Areas\Serie\SerieAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\DirectorController.cs" />
+    <Compile Include="Areas\Directors\Controllers\DirectorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\SeriesController.cs" />
+    <Compile Include="Areas\Serie\Controllers\SeriesController.cs" />
     <Compile Include="Controls\SerieItemList\SerieListItemHelper.cs" />
     <Compile Include="Controls\SerieItemList\Models\SerieListItemModel.cs" />
     <Compile Include="Controls\Combo\ComboHelper.cs" />
@@ -241,6 +243,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Serie\JS\createSerie.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\libs\bootbox\bootbox.min.js" />
@@ -261,9 +264,13 @@
     </Content>
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="Areas\Serie\Views\web.config" />
+    <Content Include="Areas\Serie\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Directors\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Directors\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\Serie\homeSerie.js" />
-    <Content Include="Scripts\Serie\editSerie.js" />
+    <Content Include="Areas\Serie\JS\homeSerie.js" />
+    <Content Include="Areas\Serie\JS\editSerie.js" />
     <Content Include="Scripts\shared\ajax.js" />
     <Content Include="Scripts\shared\init.js" />
     <Content Include="Scripts\shared\modal.js" />
@@ -315,21 +322,25 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Series\Create.cshtml" />
-    <Content Include="Views\Series\Delete.cshtml" />
-    <Content Include="Views\Series\Details.cshtml" />
-    <Content Include="Views\Series\Edit.cshtml" />
-    <Content Include="Views\Series\Index.cshtml" />
+    <Content Include="Areas\Serie\Views\Series\Create.cshtml" />
+    <Content Include="Areas\Serie\Views\Series\Delete.cshtml" />
+    <Content Include="Areas\Serie\Views\Series\Details.cshtml" />
+    <Content Include="Areas\Serie\Views\Series\Edit.cshtml" />
+    <Content Include="Areas\Serie\Views\Series\Index.cshtml" />
     <Content Include="Views\Controls\Combo.cshtml" />
-    <Content Include="Views\Director\Create.cshtml" />
-    <Content Include="Views\Director\Edit.cshtml" />
-    <Content Include="Views\Director\Index.cshtml" />
+    <Content Include="Areas\Directors\Views\Director\Create.cshtml" />
+    <Content Include="Areas\Directors\Views\Director\Edit.cshtml" />
+    <Content Include="Areas\Directors\Views\Director\Index.cshtml" />
     <Content Include="Views\Controls\SerieListItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\" />
+    <Folder Include="Areas\Directors\JS\" />
+    <Folder Include="Areas\Directors\Views\Shared\" />
+    <Folder Include="Areas\Serie\Views\Shared\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Views\Director\" />
+    <Folder Include="Views\Series\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

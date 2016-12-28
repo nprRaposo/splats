@@ -1,27 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
+﻿using System.Net;
 using System.Web.Mvc;
-using Splats.Data.DAL;
 using Splats.Data.Entities;
-using Splats.Services;
 using Splats.Services.Generic;
 using Splats.Web.Controls;
 
-namespace Splats.Web.Controllers
+namespace Splats.Web.Areas.Serie.Controllers
 {
 	public class SeriesController : Controller
 	{
 		#region Properties
-		private readonly IService<Serie> _seriesService;
+		private readonly IService<Splats.Data.Entities.Serie> _seriesService;
 		private readonly IService<Director> _directorsService;
 		#endregion
 
-		public SeriesController(IService<Serie> seriesService, IService<Director> directorsService)
+		public SeriesController(IService<Splats.Data.Entities.Serie> seriesService, IService<Director> directorsService)
 		{
 			this._seriesService = seriesService;
 			this._directorsService = directorsService;
@@ -49,15 +41,15 @@ namespace Splats.Web.Controllers
 		public ActionResult Create()
 		{
 			ViewBag.Directors = new SelectList(this._directorsService.Get(), "Id", "FullName");
-			return View();
+			return PartialView();
 		}
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult Create([Bind(Include = "Id,Name,Seasons,Description, DirectorId, ImageUrl")] Serie serie)
+		public JsonResult Create([Bind(Include = "Id,Name,Seasons,Description, DirectorId, ImageUrl")] Splats.Data.Entities.Serie serie)
 		{
 			this._seriesService.Insert(serie);
-			return RedirectToAction("Index");
+			return Json(new { Result = true, SerieName = serie.Name }, JsonRequestBehavior.AllowGet);
 		}
 
 		public ActionResult Edit(int? id)
@@ -79,7 +71,7 @@ namespace Splats.Web.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public JsonResult Edit([Bind(Include = "Id,Name,Seasons,Description, DirectorId, ImageUrl")] Serie serie)
+		public JsonResult Edit([Bind(Include = "Id,Name,Seasons,Description, DirectorId, ImageUrl")] Splats.Data.Entities.Serie serie)
 		{
 			this._seriesService.Update(serie);
 			return Json(new { Result = true, SerieId = serie.Id }, JsonRequestBehavior.AllowGet);

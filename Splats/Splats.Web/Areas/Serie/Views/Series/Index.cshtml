@@ -4,7 +4,7 @@
 	var urlReload = '@Url.Action("ReloadSerie","Series")';
 </script>
 
-<script src="~/Scripts/Serie/homeSerie.js"></script>
+<script src="~/Areas/Serie/JS/homeSerie.js"></script>
 
 @{
 	ViewBag.Title = "Index";
@@ -23,4 +23,12 @@
 
 		}
 	</div>
+	<div class="">
+		<a class="modal-link btnBottom btn btn-primary btn-circle btn-xl" href="@Url.Action("Create", "Series")" style="text-decoration: none">
+			<span data-toggle="tooltip" title="Detail"><b class="glyphicon glyphicon-plus"></b></span>
+		</a>
+	</div>
 </div>
+
+
+
