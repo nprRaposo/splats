@@ -25,6 +25,12 @@ namespace Splats.Web.Areas.Directors.Controllers
 			return View(this._directorsService.Get());
 		}
 
+		[Route("/api/directors")]
+		public JsonResult DirectorsApi()
+		{
+			return Json(new { Result = true, Directors = this._directorsService.Get()}, JsonRequestBehavior.AllowGet);
+		}
+
         // GET: Director/Create
         public ActionResult Create()
         {

@@ -15,6 +15,7 @@ namespace Splats.Web
 						"~/Content/libs/select2/js/select2.js",
 						"~/Content/libs/spin/spin.js",
 						"~/Scripts/toastr.js",
+						"~/Scripts/angular.js",
 						"~/Content/libs/bootbox/bootbox.min.js",
 						"~/Scripts/shared/*.js"));
 

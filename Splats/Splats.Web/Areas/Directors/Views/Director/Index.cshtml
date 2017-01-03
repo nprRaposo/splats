@@ -1,37 +1,25 @@
 ﻿@model IEnumerable<Splats.Data.Entities.Director>
 
-@{
-    ViewBag.Title = "Index";
-}
+<script src="~/Areas/Directors/JS/directorCrud.js"></script>
 
-<h2>Index</h2>
+<div ng-app="director">
+	<table class="table" ng-controller="director as directorCtrl" >
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Name)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Surname)
+			</th>
+		</tr>
+		<tr ng-repeat="director in directorCtrl.directors">
+			<td>
+				{{director.Name}}
+			</td>
+			<td>
+				{{director.Surname}}
+			</td>
+		</tr>
+	</table>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.Surname)*@
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @*@Html.DisplayFor(modelItem => item.Surname)*@
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-        </td>
-    </tr>
-}
-
-</table>

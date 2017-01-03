@@ -13,6 +13,8 @@ namespace Splats.Data.Entities
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Surname { get; set; }
+
+		//public string ImageUrl { get; set; }
 		public virtual IEnumerable<Serie> Series { get; set; }
 
 		[NotMapped]
